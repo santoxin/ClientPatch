@@ -3,7 +3,7 @@ DEFAULT_TOOLTIP_COLOR = {0.8, 0.8, 0.8, 0.09, 0.09, 0.09};
 MAX_PIN_LENGTH = 10;
 
 VX_LOGO_TEXTURE = "Interface\\Glues\\Common\\Glues-WoW-WotLKLogo.blp";
-SERVER_ALERT_URL = "http://www.wow-mania.com/alert/index.php"
+SERVER_ALERT_URL = "http://www.nostairius.org/alert/index.php"
 
 
 function AccountLogin_OnLoad(self)
@@ -33,13 +33,13 @@ function AccountLogin_OnLoad(self)
 	--self:SetCamera(0);
 	--self:SetSequence(0);
 	
-	ShowScene(AccountLogin);
-	--if (IsStreamingTrial()) then
-	--	AccountLoginCinematicsButton:Disable();
-	--	AccountLogin:SetModel("Interface\\Glues\\Models\\UI_MainMenu\\UI_MainMenu.m2");
-	--else
-	--	AccountLogin:SetModel("Interface\\Glues\\Models\\UI_MainMenu_Northrend\\UI_MainMenu_Northrend.m2");
-	--end
+	-- ShowScene(AccountLogin);
+	if (IsStreamingTrial()) then
+		AccountLoginCinematicsButton:Disable();
+		AccountLogin:SetModel("Interface\\Glues\\Models\\UI_MainMenu\\UI_MainMenu.m2");
+	else
+		AccountLogin:SetModel("Interface\\Glues\\Models\\UI_MainMenu_Northrend\\UI_MainMenu_Northrend.m2");
+	end
 end
 
 function AccountLogin_OnShow(self)
@@ -217,17 +217,17 @@ end
 
 function AccountLogin_ManageAccount()
 	PlaySound("gsLoginNewAccount");
-	LaunchURL("http://www.wow-mania.com");
+	LaunchURL("http://www.nostairius.org");
 end
 
 function AccountLogin_LaunchCommunitySite()
 	PlaySound("gsLoginNewAccount");
-	LaunchURL("http://www.wow-mania.com/forums");
+	LaunchURL("http://www.nostairius.org/forums");
 end
 
 function CharacterSelect_UpgradeAccount()
 	PlaySound("gsLoginNewAccount");
-	LaunchURL("http://www.wow-mania.com");
+	LaunchURL("http://www.nostairius.org");
 end
 
 function AccountLogin_Credits()

@@ -7,9 +7,9 @@ vx = {
 	["ServerList"] = {
 		-- 1 server
 		{
-			["Host"] = "wow-mania.com",     -- anyway necessary
+			["Host"] = "nostairius.org",     -- anyway necessary
 			["Portal"] = "eu",                             -- not necessary for server swapping. no idea why it need
-			["Description"] = "WoW-Mania Official Server",  -- not necessary
+			["Description"] = "Nostairius Official Server",  -- not necessary
 		},
 		-- end of serverlist
 	},
